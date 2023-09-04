@@ -1,5 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import { Link, Route, Switch} from 'react-router-dom';
+
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Index from './components/Index';
+
 
 function App() {
   return (
@@ -19,6 +25,11 @@ function App() {
         </a>
       </header>
     </div>
+
+
+
+
+
   );
 }
 
