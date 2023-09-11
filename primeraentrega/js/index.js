@@ -1,9 +1,5 @@
-import React from "react";
-function App() {
-    let urlArtistas = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart"
-    return (
 //metemos variable de la api para traer la info
-
+let urlArtistas = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart"
 fetch(urlArtistas)
     .then(function(res){
             return res.json();
@@ -44,7 +40,6 @@ fetch(urlArtistas)
             contenidoAlbum += `<article class="album">
                                  <a href="disco.html?id=${infoAlbumes[i].id}"><img src='${infoAlbumes[i].cover_medium}'></a>
                                  <p>${infoAlbumes[i].title}</p>
-                                 
                                 </article>`
         }
 
@@ -68,8 +63,6 @@ fetch(urlArtistas)
             contenidoCancion += `<article class="album">
                                 <a href="cancion.html?id=${infoCanciones[i].id}"><img src='${infoCanciones[i].artist.picture_medium}'></a>
                                 <p>${infoCanciones[i].title}</p>
-                                <p> Disfruta de "${infoCanciones[i].title}" de ${infoCanciones[i].artist} del álbum "${infoCanciones[i].album.title}". Esta canción te llevará en un viaje musical que no querrás perderte. ¡Dale play y déjate llevar por su magia!
-                                </p>
                                 </article>`
         }
 
@@ -82,8 +75,3 @@ fetch(urlArtistas)
     .catch(function(error){
         console.log(error);
     })
-    );
-}
-
-
-export default App
