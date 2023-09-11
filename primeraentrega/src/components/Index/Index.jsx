@@ -6,6 +6,9 @@ function Index(props){
             <ul className="cantantes">
                 <h2>Canciones</h2>
             </ul>
+            <ul className="cantantes">
+                <h2>Generos</h2>
+            </ul>
         </nav>
     )
 }
