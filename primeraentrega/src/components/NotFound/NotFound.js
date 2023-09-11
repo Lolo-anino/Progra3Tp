@@ -2,7 +2,7 @@ import React from "react";
 
 function NotFound() {
     return(
-        <div>
+        <div className="ErrorFound">
             <img  src="./img/errorGato.gif"></img>
         </div>
     );

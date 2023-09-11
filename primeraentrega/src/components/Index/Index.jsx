@@ -4,7 +4,7 @@ function Index(props){
     return(
         <nav>
             <ul className="cantantes">
-                <h2>Artistas</h2>
+                <h2>Canciones</h2>
             </ul>
         </nav>
     )

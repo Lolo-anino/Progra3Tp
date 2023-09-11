@@ -1,5 +1,4 @@
 import React from "react";
-import logo from './logo.svg';
 import './App.css';
 import { Link, Route, Switch} from 'react-router-dom';
 import Header from './components/Header/Header';
@@ -16,16 +15,15 @@ function App() {
     <React.Fragment>
     <Header />
 
-    <Index>
+    <main>
       <Switch>
         <Route path='/' exact={true} component={Index} />
         <Route path='' component={NotFound} />
       </Switch>
-    </Index>
-
-    <Footer/>
+    </main>
+    <Footer />
     
-  </React.Fragment>
+    </React.Fragment>
 
 
 

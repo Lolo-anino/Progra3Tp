@@ -541,3 +541,6 @@ max-width: 350px;
   font-size: 30px;
   padding: 40px;
 }
+.ErrorFound {
+  background-size: contain;
+};
