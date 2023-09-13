@@ -1,16 +1,21 @@
-import React from "react"
+import React, { Component } from 'react';
+import CardContainer from '../CardConteiner/CardConteiner';
 
-function Index(props){
-    return(
+class Index extends Component{
+    render(){
+        return(
         <nav>
-            <ul className="cantantes">
+            <img src="./img/banner.jpg" alt="" class="banner"></img>
+            <main class="cantantes">
                 <h2>Canciones</h2>
-            </ul>
-            <ul className="cantantes">
+                <CardContainer url="https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart"/>
+                </main>
+                <main class="cantantes">
                 <h2>Generos</h2>
-            </ul>
+                <CardContainer url="https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart"/>
+            </main>
         </nav>
-    )
+    )}
 }
 
 export default Index
