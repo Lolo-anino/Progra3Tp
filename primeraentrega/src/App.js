@@ -21,6 +21,7 @@ function App() {
     <main>
       <Switch> 
         <Route path='/' exact={true} component={Index} />
+        <Route path='/search-result/:busqueda' exact={true} component={Index} />
         {/* <Route path='/album/id/:id' component={DetalleAlbum}/> */}
        {/* <Route path='/cancion/id/:id' component={DetalleCancion}/> */} 
         <Route path='/all' component={Todas} />

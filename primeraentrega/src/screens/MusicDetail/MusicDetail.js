@@ -4,7 +4,7 @@ import loadGif from "../../loadGif.gif";
 
 class MusicDetail extends Component{
     constructor(props){
-        super();
+        super(props);
         this.state = {
             musicInfo: [],
             textoBoton: 'Agregar a favoritos'
@@ -12,7 +12,7 @@ class MusicDetail extends Component{
     };
 
     componentDidMount(){
-        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${this.props.id}`)
+        fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/track/${this.props.match.params.id}`)
         .then( response => response.json() )
         .then( data => this.setState({
             musicInfo: data},
