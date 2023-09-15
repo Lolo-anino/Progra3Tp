@@ -18,23 +18,12 @@ class Albumes extends Component{
     render(){
         return(
         <React.Fragment>
-           <article className="contenedor">
-           <Link to={`/canciones/${this.props.albumes.id}`}>
+           <article className="cancion">
+           {/* <Link to={`/albumes/${this.props.albumes.id}`}> */}
             <img src= {this.props.canciones.albumes.picture} alt="Album cover"/>
-            </Link>
+            {/* </Link> */}
             <h2 className="title">{this.props.albumes.title}</h2>
             <p>Artista: {this.props.albumes.artist.name}</p>
-            {this.state.verMas ? 
-            <section className='ver'>
-                <p>Fecha de lanzamiento: </p>
-                <button onClick={() => this.verMenos()}>Ver menos</button>
-                </section>
-                   :
-                <p className='mas' onClick={() => this.verMas()}>Ver mas</p>                  
-            }
-            <Link to={`/canciones/${this.props.albumes.id}`}>
-                <button>Ir a detalle</button>
-            </Link>
            </article>
         {/* favorito agregar */}
         </React.Fragment>

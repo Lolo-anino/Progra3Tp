@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Canciones from '../../components/Canciones/Canciones';
 import Albumes from '../../components/Albumes/Albumes';
 
@@ -11,18 +10,18 @@ function CardConteiner(props) {
                 (props.esAlbum ? 
                     (props.esBusqueda ? <section className="cantantes">
                     {props.info.map((album, i) => (
-                        <Albumes key={album + i} albumes={album} esBusqueda={true}/>
+                        <Albumes key={album} albumes={album} esBusqueda={true}/>
                     ))}
-                </section>: <section className="cantantes">
+                {/* </section>: <section className="cantantes">
                     {props.info.map((album, i) => (
-                        <Albumes key={album + i} albumes={album} />
+                        <Albumes key={album} albumes={album} />
                     ))}
                 </section>)
                 :
                 <section className="cantantes">
                     {props.info.map((tracks, i) => (
-                        <Canciones key={tracks + i} canciones={tracks} />
-                    ))}
+                        <Canciones key={tracks} canciones={tracks} />
+                    ))} */}
                 </section>)
                 :
                 <h2>Cargando...</h2>

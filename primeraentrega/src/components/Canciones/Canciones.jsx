@@ -18,9 +18,9 @@ class Canciones extends Component{
     render(){
         return(
         <React.Fragment>
-           <article className="contenedor">
+           <article className="cancion">
            <Link to={`/canciones/${this.props.canciones.id}`}>
-            <img src= {this.props.canciones.album.cover} alt="Album cover"/>
+            <img src= {this.props.canciones.album.cover_medium} alt="Album cover"/>
             </Link>
             <h2 className="title">{this.props.canciones.title}</h2>
             <p>Artista: {this.props.canciones.artist.name}</p>
