@@ -12,7 +12,7 @@ function CardConteiner(props) {
                     {props.info.map((album, i) => (
                         <Albumes key={album} albumes={album} esBusqueda={true}/>
                     ))}
-                {/* </section>: <section className="cantantes">
+                </section>: <section className="cantantes">
                     {props.info.map((album, i) => (
                         <Albumes key={album} albumes={album} />
                     ))}
@@ -21,7 +21,7 @@ function CardConteiner(props) {
                 <section className="cantantes">
                     {props.info.map((tracks, i) => (
                         <Canciones key={tracks} canciones={tracks} />
-                    ))} */}
+                    ))}
                 </section>)
                 :
                 <h2>Cargando...</h2>

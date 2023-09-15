@@ -39,7 +39,7 @@ render(){
         <h2>Top 5 Canciones</h2>
         <CardConteiner info = {this.state.canciones} esAlbum={false}/>
         <h2>Top 5 Albumes</h2>
-        {/* <CardConteiner info = {this.state.albumes} esAlbum={true}/> */}
+         <CardConteiner info = {this.state.albumes} esAlbum={true}/> 
         <Footer/>
         </>
     )
