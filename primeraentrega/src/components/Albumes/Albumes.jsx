@@ -20,7 +20,7 @@ class Albumes extends Component{
         <React.Fragment>
            <article className="contenedor">
            <Link to={`/canciones/${this.props.albumes.id}`}>
-            <img src= {this.props.canciones.albumes.picture} alt="Album cover"/>
+            <img src= {this.props.albumes.cover} alt="Album cover"/>
             </Link>
             <h2 className="title">{this.props.albumes.title}</h2>
             <p>Artista: {this.props.albumes.artist.name}</p>
