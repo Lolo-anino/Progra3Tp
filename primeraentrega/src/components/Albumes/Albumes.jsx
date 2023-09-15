@@ -19,12 +19,16 @@ class Albumes extends Component{
         return(
         <React.Fragment>
            <article className="cancion">
-           <Link to={`/canciones/${this.props.albumes.id}`}>
+           <Link to={`/albumes/${this.props.albumes.id}`}>
             <img src= {this.props.albumes.cover} alt="Album cover"/>
             </Link>
             <h2 className="title">{this.props.albumes.title}</h2>
             <p>Artista: {this.props.albumes.artist.name}</p>
+            <Link to={`/albumes/${this.props.albumes.id}`}>
+                <button>Ir a detalle</button>
+            </Link>
            </article>
+           
         {/* favorito agregar */}
         </React.Fragment>
         )
