@@ -27,7 +27,7 @@ class Canciones extends Component{
             {this.state.verMas ? 
             <section className='ver'>
                 <p>Duración: {this.props.canciones.duration}</p>
-                <p>Fecha de lanzamiento: {this.props.canciones.release_date}</p>
+                <p>Descripcion: Esta cancion es ideal para vos, esperamos que te guste!</p>
                 <button onClick={() => this.verMenos()}>Ver menos</button>
                 </section>
                 :

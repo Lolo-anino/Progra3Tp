@@ -17,7 +17,7 @@ function App() {
   return (
     
     <React.Fragment>
-    <Header />
+    
 
     <main>
       <Switch> 
@@ -31,7 +31,7 @@ function App() {
         <Route path='' component={NotFound} />
       </Switch>
     </main>
-    <Footer />
+    
     
     </React.Fragment>
 
