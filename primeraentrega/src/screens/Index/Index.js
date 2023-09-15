@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Footer from "../../components/Footer/Footer";
 import CardConteiner from "../../components/CardConteiner/CardConteiner";
 import Header from "../../components/Header/Header";
+import Form from "../../components/Form/Form";
 
 class Index extends Component {
     constructor(){
@@ -27,6 +28,7 @@ class Index extends Component {
         albumes: datos.data
     }))
     .catch(error => console.log(error));
+
 }
 
 render(){
@@ -34,10 +36,10 @@ render(){
         <>
         <Header/>
         <Form/>
-        <h2>Canciones más escuchadas</h2>
-        <CardConteiner data = {this.state.canciones} esAlbum={false}/>
-        <h2>Albumes más escuchados</h2>
-        <CardConteiner data = {this.state.albumes} esAlbum={true}/>
+        <h2>Top 5 Canciones</h2>
+        <CardConteiner info = {this.state.canciones} esAlbum={false}/>
+        <h2>Top 5 Albumes</h2>
+        <CardConteiner info = {this.state.albumes} esAlbum={true}/>
         <Footer/>
         </>
     )

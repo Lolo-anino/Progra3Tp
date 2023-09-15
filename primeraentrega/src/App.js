@@ -2,7 +2,7 @@ import React from "react";
 
 import { Route, Switch} from 'react-router-dom';
 import Header from './components/Header/Header';
-import Index from './components/Index/Index';
+import Index from './screens/Index/Index';
 import NotFound from './components/NotFound/NotFound';
 import MusicDetail from "./screens/MusicDetail/MusicDetail";
 import Footer from './components/Footer/Footer';
