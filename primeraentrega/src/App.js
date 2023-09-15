@@ -5,10 +5,11 @@ import Header from './components/Header/Header';
 import Index from './screens/Index/Index';
 import NotFound from './screens/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
-import Todas from './components/Todas/Canciones';
+import Todas from './screens/Todas/Canciones';
 import Todos from './screens/Todas/Albumes';
 import DetalleCancion from './screens/Detalle/DetalleCancion';
 import DetalleAlbum from './screens/Detalle/DetalleAlbum';
+import Playlist from './screens/Favoritos/Favoritos';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path='/canciones/:id' component={DetalleCancion}/> 
         <Route path='/allsongs' component={Todas} />
         <Route path='/allalbums' component={Todos} />
+        <Route path='/playlist' component={Playlist} />
         <Route path='' component={NotFound} />
       </Switch>
       <Footer/>
