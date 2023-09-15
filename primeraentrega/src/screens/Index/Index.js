@@ -34,13 +34,11 @@ class Index extends Component {
 render(){
     return(
         <>
-        <Header/>
         <Form/>
-        <h2>Top 5 Canciones</h2>
+        <h2 className="h2artistas">Top 5 Canciones</h2>
         <CardConteiner info = {this.state.canciones} esAlbum={false}/>
-        <h2>Top 5 Albumes</h2>
+        <h2 className="h2artistas">Top 5 Albumes</h2>
          <CardConteiner info = {this.state.albumes} esAlbum={true}/> 
-        <Footer/>
         </>
     )
 }

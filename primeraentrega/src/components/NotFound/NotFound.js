@@ -1,9 +1,11 @@
 import React from "react";
+import "./NotFound";
 
 function NotFound() {
     return(
-        <div className="ErrorFound">
-            <img  src="./img/errorGato.gif"></img>
+        <div>
+            <h4>_404_</h4>
+            <img className="imgFound" src="./img/errorGato.gif"></img>
         </div>
     );
 };
