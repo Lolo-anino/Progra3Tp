@@ -5,11 +5,12 @@ import Header from './components/Header/Header';
 import Index from './screens/Index/Index';
 import NotFound from './screens/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
-import Todas from './components/Todas/Canciones';
+import Todas from './screens/Todas/Canciones';
 import Todos from './screens/Todas/Albumes';
 import MusicDetail from "./screens/MusicDetail/MusicDetail";
 import DetalleAlbum from './screens/Detalle/DetalleAlbum';
-
+import Playlist from './screens/Favoritos/Favoritos';
+import Resultados from './screens/Resultados/Resultadoss.js';
 
 function App() {
 
@@ -22,11 +23,13 @@ function App() {
       <Header/>
       <Switch> 
         <Route path='/' exact={true} component={Index} />
-        <Route path='/search-result/:busqueda' exact={true} component={Index} />
+        <Route path='/search-result/:busqueda' exact={true} component={Resultados} />
         <Route path='/albumes/:id' component={DetalleAlbum}/>
         <Route path='/canciones/:id' component={MusicDetail}/> 
         <Route path='/allsongs' component={Todas} />
         <Route path='/allalbums' component={Todos} />
+        <Route path='/playlist' component={Playlist} />
+        <Route path='/search-result' component={Resultados} />
         <Route path='' component={NotFound} />
       </Switch>
       <Footer/>
