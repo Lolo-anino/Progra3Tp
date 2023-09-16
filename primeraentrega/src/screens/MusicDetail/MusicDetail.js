@@ -8,7 +8,7 @@ class MusicDetail extends Component{
         super(props);
         this.state = {
             musicInfo: [],
-            textoBoton: 'Agregar a favoritos'
+            textoBoton: 'Veamos si la cancion esta en favoritos'
         }
     };
 
@@ -33,7 +33,7 @@ class MusicDetail extends Component{
             console.log(favoritos);
             if(favoritos.includes(this.state.id)) {
                 this.setState({
-                    textoBoton: 'Borrar de favoritos'
+                    textoBoton: 'Lo esta. Click para borrar de favoritos'
                 })
             }
         }
@@ -51,12 +51,12 @@ class MusicDetail extends Component{
         if(favoritos.includes(id)) {
             favoritos = favoritos.filter(unID => unID !== id)
             this.setState({
-                textoBoton: 'Agreagar a favorito'
+                textoBoton: 'No lo esta. Click para agregar a favoritos'
             })
         } else {
             favoritos.push(id)
             this.setState({
-                textoBoton: 'Borrar de favoritos'
+                textoBoton: 'Lo esta. Click para borrar de favoritos'
             })
         }
 

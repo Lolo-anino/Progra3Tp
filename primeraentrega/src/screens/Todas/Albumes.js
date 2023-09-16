@@ -18,7 +18,7 @@ class Todos extends Component{
         .then((response)=> response.json() )
         .then((datos)=>
         this.setState({
-            canciones: datos.data
+            albumes: datos.data
     }))
     .catch(error => console.log(error));
     
