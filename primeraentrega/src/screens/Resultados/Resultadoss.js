@@ -1,18 +1,17 @@
 import React, {Component} from "react";
-import Footer from "../../components/Footer/Footer";
 import CardConteiner from "../../components/CardConteiner/CardConteiner";
 import "../../App.css";
-import loadGif from "../../loadGif.gif";
 class Resultados extends Component {
     constructor(props){
         super(props);
         this.state = {
             buscado: this.props.match.params.buscado,
-            resultadosAlbumes: [], resultadosTracks: []
+            resultadosAlbumes: [],
+            resultadosTracks: []
         }
     }
-
-componentDidMount(){
+    
+    componentDidMount(){
     fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/search?q=album:${this.state.buscado}`)
     .then((response) => response.json())
     .then((datos) =>
@@ -32,14 +31,11 @@ componentDidMount(){
 render(){
     return(
         <>
-        
-        <section>    s
-        <h2>Resultados de tu búsqueda: {this.props.match.params.buscado}</h2>
-        {this.state.resultadosAlbumes.length >0 ? <CardConteiner info={this.state.resultadosAlbumes} esAlbum={true} esBusqueda={true}/> : "No hay ningun album que coincida con tu búsqueda"}
-        {this.state.resultadosTracks.length >0 ? <CardConteiner info={this.state.resultadosTracks} esAlbum={false}/> : "No hay ninguna cancion que coincida con tu búsqueda"}
+        <section> 
+        <h2>Resultados de tu búsqueda: {this.state.buscado}</h2>
+        {this.state.resultadosAlbumes.length >0 ? <CardConteiner info={this.state.resultadosAlbumes}/> : "No hay ningun album que coincida con tu búsqueda"}
+        {this.state.resultadosTracks.length >0 ? <CardConteiner info={this.state.resultadosTracks}/> : "No hay ninguna cancion que coincida con tu búsqueda"}
         </section>
-    
-        <Footer/>
         </>
     );
 }

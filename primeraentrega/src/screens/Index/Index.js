@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-import Footer from "../../components/Footer/Footer";
 import CardConteiner from "../../components/CardConteiner/CardConteiner";
-import Header from "../../components/Header/Header";
 import Form from "../../components/Form/Form";
 
 class Index extends Component {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './MusicDetail.css';
 import loadGif from "../../loadGif.gif";
-import Footer from '../../components/Footer/Footer';
 
 class MusicDetail extends Component{
     constructor(props){
@@ -100,7 +99,6 @@ class MusicDetail extends Component{
                 </section>
 
                 }
-                <Footer/>
             </div>
         )
     }
