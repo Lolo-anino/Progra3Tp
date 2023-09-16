@@ -6,19 +6,15 @@ class Resultados extends Component {
         super(props);
         this.state = {
             buscado: this.props.match.params.buscado,
+             resultadosTracks: []
             resultadosAlbumes: [],
             resultadosTracks: []
         }
     }
+
+componentDidMount(){
+ 
     
-    componentDidMount(){
-    fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/search?q=album:${this.state.buscado}`)
-    .then((response) => response.json())
-    .then((datos) =>
-    this.setState({
-        resultadosAlbumes : datos.data
-    }))
-    .catch(e => console.log(e));
     fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/search?q=track:${this.state.buscado}`)
     .then((response) => response.json())
     .then((datos) =>
@@ -31,10 +27,11 @@ class Resultados extends Component {
 render(){
     return(
         <>
-        <section> 
-        <h2>Resultados de tu búsqueda: {this.state.buscado}</h2>
-        {this.state.resultadosAlbumes.length >0 ? <CardConteiner info={this.state.resultadosAlbumes}/> : "No hay ningun album que coincida con tu búsqueda"}
-        {this.state.resultadosTracks.length >0 ? <CardConteiner info={this.state.resultadosTracks}/> : "No hay ninguna cancion que coincida con tu búsqueda"}
+        
+        <section>    
+        <h2>Resultados de tu búsqueda: {this.props.match.params.buscado}</h2>
+        
+        {this.state.resultadosTracks.length >0 ? <CardConteiner info={this.state.resultadosTracks} /> : "No hay ninguna cancion que coincida con tu búsqueda"}
         </section>
         </>
     );
