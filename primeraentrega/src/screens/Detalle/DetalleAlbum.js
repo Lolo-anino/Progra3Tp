@@ -23,20 +23,16 @@ class DetalleAlbum extends Component {
 
     }
     render(){
-        console.log('aca' + this.state.detAlbum.album);
+        console.log('aca' + this.state.detAlbum);
         
         return (
             <>
            
                 <h2 className="artistas">{this.state.detAlbum.title}</h2>
-                <article className="cajita-canciones">
-                    <img src={`https://e-cdn-images.dzcdn.net/images/cover/${this.state.detAlbum.cover}/264x264-000000-80-0-0.jpg`}/>
-                    <h3>Artista: {this.state.detAlbum.name}</h3> : <h3> No se encuentra el nombre</h3>
-                    <h3>Pertenece al album: {this.state.detAlbum.title}</h3>
+                <article className="cajita-canciones">  
+                    <img src={this.state.detAlbum.cover_medium}/>  
+                    <h3>Artista: {this.state.detAlbum.name}</h3>
                     <h3>se estreno la cancion en {this.state.detAlbum.release_date}</h3>
-                    <div className="detalle">
-                        <iframe className="detalle" src={this.state.detAlbum.preview} />
-                    </div>
                     {/* <button id="btn" className="btnVer verIndex" onClick={()=>this.agregarAFavoritos(this.state.detalleCancion.id)} type="button">{ this.state.textoBoton }</button>      
                  */}</article>
             

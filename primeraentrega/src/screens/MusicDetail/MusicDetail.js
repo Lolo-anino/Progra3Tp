@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './MusicDetail.css';
 import loadGif from "../../loadGif.gif";
+import Footer from '../../components/Footer/Footer';
 
 class MusicDetail extends Component{
     constructor(props){
@@ -72,22 +73,25 @@ class MusicDetail extends Component{
                 <h1 className="main-title">Music detail</h1>
 
                 {
-                    this.state.musicInfo.data.length === 0 ? 
+                    this.state.musicInfo.length === 0 ? 
                     <div className='gif'>
                         <img src={loadGif} alt="wait until the page loads" /> 
                     </div> 
                     :
                     <section>
-                    
+        
                     <article className='data'>
-                    <iframe title="deezer-widget" className="ifram" src="https://widget.deezer.com/widget/dark/track/{this.state.musicInfo.id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+                   
                         <h2>{this.state.musicInfo.title}</h2>
 
-                        <p> Artista: {this.state.musicInfo.artist}</p>
+                        <p> Artista: {this.state.musicInfo.artist.name}</p>
 
                         <p>Nombre del disco: {this.state.musicInfo.album.title}</p>
 
-                        <img>{this.state.musicInfo.album.cover_medium}</img>
+                        <img src={this.state.musicInfo.album.cover_medium} alt={this.state.musicInfo.title} />
+                        <audio controls>
+                            <source src= {this.state.musicInfo.preview}/>
+                        </audio>
 
                         <section className='vermas2'>
                             <p className='trackplay' onClick={()=> this.agregarAFavoritos(this.state.musicInfo.id)}>{this.state.textoBoton}</p> 
@@ -96,6 +100,7 @@ class MusicDetail extends Component{
                 </section>
 
                 }
+                <Footer/>
             </div>
         )
     }

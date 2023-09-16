@@ -7,7 +7,7 @@ import NotFound from './screens/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 import Todas from './components/Todas/Canciones';
 import Todos from './screens/Todas/Albumes';
-import DetalleCancion from './screens/Detalle/DetalleCancion';
+import MusicDetail from "./screens/MusicDetail/MusicDetail";
 import DetalleAlbum from './screens/Detalle/DetalleAlbum';
 
 
@@ -24,7 +24,7 @@ function App() {
         <Route path='/' exact={true} component={Index} />
         <Route path='/search-result/:busqueda' exact={true} component={Index} />
         <Route path='/albumes/:id' component={DetalleAlbum}/>
-        <Route path='/canciones/:id' component={DetalleCancion}/> 
+        <Route path='/canciones/:id' component={MusicDetail}/> 
         <Route path='/allsongs' component={Todas} />
         <Route path='/allalbums' component={Todos} />
         <Route path='' component={NotFound} />
