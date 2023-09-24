@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import "../../App.css";
-import loadGif from "../../loadGif.gif";
 import CardConteiner from "../../components/CardConteiner/CardConteiner";
 import Form from "../../components/Form/Form";
 

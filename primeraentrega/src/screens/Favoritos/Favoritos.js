@@ -23,7 +23,7 @@ class Playlist extends Component {
                 .then((data) => {
                     console.log(data);
                     this.setState({
-                        Cancionesfavs: this.state.Cancionesfavs.concat(data)``
+                        Cancionesfavs: this.state.Cancionesfavs.concat(data)
                     });
                 })
                 .catch((e) => console.log(e));
