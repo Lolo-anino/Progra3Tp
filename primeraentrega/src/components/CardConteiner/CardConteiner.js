@@ -8,15 +8,11 @@ function CardConteiner(props) {
         <>
             {props.info.length > 0 ?
                 (props.esAlbum ? 
-                    (props.esBusqueda ? <section className="cantantes">
-                    {props.info.map((album) => (
-                        <Albumes key={album} albumes={album} esBusqueda={true}/>
-                    ))}
-                </section>: <section className="cantantes">
+                     <section className="cantantes">
                     {props.info.map((album) => (
                         <Albumes key={album} albumes={album} />
                     ))}
-                </section>)
+                </section>
                 :
                 <section className="cantantes">
                     {props.info.map((tracks) => (
